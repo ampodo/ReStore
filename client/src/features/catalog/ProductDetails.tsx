@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import NotFound from "../../app/errors/NotFound";
 import LoadingComponent from "../../app/layout/LoadingComponent";
 import { useAppDispatch, useAppSelector } from "../../app/store/configureStore";
-import { addBasketItemAsync, removeBasketItemAsync  } from "../basket/basketSlice";
+import { addBasketItemAsync, removeBasketItemAsync  } from "../basket/basketSlice";  
 import { fetchProductAsync, productSelectors } from "./catalogSlice";
 import "./details.css";
 
@@ -24,7 +24,7 @@ export default function ProductDetails() {
         if (!product) dispatch(fetchProductAsync(parseInt(id)))
     }, [id, item, dispatch, product]);
 
-
+    
    
    function handleInputChange(event: any) {
        if (event.target.value >= 0 && event.target.value <=5 ) {
