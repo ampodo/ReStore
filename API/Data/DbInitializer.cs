@@ -89,7 +89,7 @@ namespace API.Data
                 {
                     Name = "Light fluid",
                     Description = "Hydrating treatment comprises soft fluid in order to moisturize the most dehydrated epidermis.",
-                    Price = 53,
+                    Price = 56,
                     PictureUrl = "/images/products/hydra1.png",
                     Brand = "Hydraderm",
                     Type = "Treatment",
@@ -99,7 +99,7 @@ namespace API.Data
                 {
                     Name = "Serum",
                     Description = "Booster for all skin types. This is a fluid serum with moisturizing ingredients. Composed of acid pearls, more than 90% of natural ingredients.",
-                    Price = 58,
+                    Price = 60,
                     PictureUrl = "/images/products/hydra2.png",
                     Brand = "Hydraderm",
                     Type = "Treatment",
@@ -135,6 +135,34 @@ namespace API.Data
                     Type = "Smoothing",
                     QuantityInStock = 5
                 },
+
+               
+               new Product
+                {
+                    Name = "Serum",
+                    Description = "Revitalizing serum which is rich in extract and helps to recover the skin's biomechanical properties.",
+                    Price = 75,
+                    PictureUrl = "/images/products/sevemiracle1.png",
+                    Brand = "Seve Miracle",
+                    Type = "Treatment",
+                    QuantityInStock = 5
+                },
+
+
+                new Product
+                {
+                    Name = "Mask",
+                    Description = "Mask with apricot extract that relieves fatigueness. Gives instant radiance and freshness.",
+                    Price = 26,
+                    PictureUrl = "/images/products/masqueapricot.png",
+                    Brand = "Academie face",
+                    Type = "Treatment",
+                    QuantityInStock = 5
+                },
+
+               
+
+               
             };
            
             foreach (var product in products)
