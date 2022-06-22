@@ -26,7 +26,7 @@ export default function Header() {
    
 
     return (
-         <AppBar position='static' style={{backgroundColor: "white"}} sx={{mb: 8}}>
+         <AppBar position='static' style={{backgroundColor: "white"}}>
              <Toolbar sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
 
                 <Typography variant='h6' component={NavLink}
