@@ -9,7 +9,6 @@ import HomePage from "../../features/home/Homepage";
 import Header from "./Header";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import ServerError from "../errors/ServerError";
 import NotFound from "../errors/NotFound";
 import BasketPage from "../../features/basket/BasketPage";
 import { useEffect, useState } from "react";
@@ -19,8 +18,8 @@ import LoadingComponent from "./LoadingComponent";
 import CheckoutPage from "../../features/checkout/CheckoutPage";
 import { useAppDispatch } from "../store/configureStore";
 import { setBasket } from "../../features/basket/basketSlice";
-
-
+import Footer from "./Footer";
+ 
 
 function App() {
      const dispatch = useAppDispatch();
@@ -63,6 +62,7 @@ function App() {
       <ToastContainer position='bottom-right' hideProgressBar/>
       <CssBaseline />
        <Header />
+       <main className="container content">
        <Route exact path='/' component={HomePage} />
       <Route path={'/(.+)'} render={() => (
         <Container  sx={{ mt: 4 }}>
@@ -71,15 +71,15 @@ function App() {
             <Route path='/catalog/:id' component={ProductDetails} />
             <Route path='/about' component={AboutPage} />
             <Route path='/contact' component={ContactPage} />
-            <Route path='/server-error' component={ServerError} />
             <Route path='/basket' component={BasketPage} />
             <Route path='checkout' component={CheckoutPage} />
             <Route component={NotFound} />
           </Switch>
         </Container>
-       
+          
       )} />
-
+         </main>
+      <Footer/>
     </ThemeProvider>
    
   );

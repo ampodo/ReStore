@@ -1,17 +1,32 @@
 
-  * {
+ 
+ * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
      } 
 
 
+    
      .content {
-   
-        min-height: calc(100vh - 70px - 56px);
-        padding: 1.5rem 0;
-   }
+              
+        min-height: calc(100vh - 88px - 64px); 
+            
+        }
 
-  
+
+    
+     .footer {
+      flex-shrink: 0;
+      padding: 2em;
+      text-align: center;
+      background-color: white;
+      color: black;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+
+
   
 

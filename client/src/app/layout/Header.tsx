@@ -1,8 +1,9 @@
 import { ShoppingCart } from "@mui/icons-material";
-import { AppBar, Badge, Box, IconButton, List, ListItem, Toolbar, Typography } from "@mui/material";
+import { AppBar, Badge, Box,IconButton, List, ListItem, Toolbar, Typography} from "@mui/material";
 import { Link, NavLink } from "react-router-dom";
 import { useAppSelector } from "../store/configureStore";
 import "./styles.css"
+
 
 
 const midLinks = [
@@ -26,7 +27,7 @@ export default function Header() {
    
 
     return (
-         <AppBar position='static' style={{backgroundColor: "white"}}>
+         <AppBar position='sticky' style={{backgroundColor: "white"}}>
              <Toolbar sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
 
                 <Typography variant='h6' component={NavLink}
@@ -83,7 +84,6 @@ export default function Header() {
                     ))}
                 </List>
              </Box>
-
              </Toolbar>      
          </AppBar>
     )
