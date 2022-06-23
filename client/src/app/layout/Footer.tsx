@@ -22,7 +22,7 @@ export default function Footer() {
        
       <Box>
       
-      <Link href="/catalog" color="inherit" sx={{textDecoration: 'none'}}>
+      <Link href="/catalog" color="inherit" sx={{textDecoration: 'none', fontWeight: 'bold'}}>
       
       Catalog
       
@@ -32,7 +32,7 @@ export default function Footer() {
       
       <Box>
       
-      <Link href="/contact" color="inherit" sx={{textDecoration: 'none'}}>
+      <Link href="/contact" color="inherit" sx={{textDecoration: 'none', fontWeight: 'bold'}}>
       
       Contact
       
@@ -42,7 +42,7 @@ export default function Footer() {
       
       <Box>
       
-      <Link href="/about" color="inherit" sx={{textDecoration: 'none'}}>
+      <Link href="/about" color="inherit" sx={{textDecoration: 'none',fontWeight: 'bold'}}>
       
       About
       

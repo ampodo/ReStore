@@ -29,7 +29,7 @@ export default function Homepage() {
           </div>
       </Slider>
       <Box display='flex' justifyContent='center' sx={{p: 4}} >
-          <Typography variant='h2'>Welcome to Academie Lab</Typography>
+          <Typography variant='h3'>Welcome to Academie Cabinet</Typography>
        </Box>
   </>
 

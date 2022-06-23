@@ -81,7 +81,15 @@
              <Grid item xs={6}/>
              <Grid item xs={6}>
              <BasketSummary />
-             <Button component={Link} to='/checkout' variant='contained' size='large' fullWidth>Check out</Button>
+             <Button
+             sx={{mb:4}}
+             component={Link} 
+             to='/checkout' 
+             variant='contained' 
+             size='large' 
+             fullWidth>
+               Check out
+               </Button>
              </Grid>
        </Grid>
 

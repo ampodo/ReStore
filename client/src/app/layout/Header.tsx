@@ -43,13 +43,14 @@ export default function Header() {
                 <img className="logo" src="/icons/logo.png" alt=""/>
                 </div>
                 </Typography>
-                <List sx={{display: 'flex', ml: 12}}>
+                <div className="center_content">
+                <List sx={{display: 'flex', ml: 8}}>
                     {midLinks.map(({title, path}) => (
                         <ListItem
                            component={NavLink}
                            to={path}
                            key={path}
-                           sx={{color: 'black', typography: 'h6', fontWeight: 'bold',
+                           sx={{color: 'black', fontWeight: 'bold',
                            '&:hover': {
                                color: 'grey.500'
                            },
@@ -63,8 +64,12 @@ export default function Header() {
                     
                     ))}
                 </List>
+                </div>
 
-               <Box display='flex' alignItems='center'>
+
+               
+               <Box display='flex' alignItems='center'
+               >
                <IconButton component = {Link} to='/basket' size='large' sx={{color:'black'}}>
                     <Badge badgeContent={itemCount} color='primary'>
                          <ShoppingCart />
@@ -87,7 +92,7 @@ export default function Header() {
                                     component={NavLink}
                                     to={path}
                                     key={path}
-                                    sx={{color: 'black', typography: 'h6', fontWeight: 'bold',
+                                    sx={{color: 'black',  fontWeight: 'bold',
                                     '&:hover': {
                                      color: 'grey.500'
                                    },
@@ -112,6 +117,7 @@ export default function Header() {
     )
 
 }
+
 
 
 

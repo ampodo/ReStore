@@ -100,7 +100,7 @@ export default function ProductDetails() {
                           value={quantity}
                      />
                    </Grid>
-                  <Grid item xs={6}>
+                  <Grid item xs={6} sx={{mb:4}}>
                        <LoadingButton
                             disabled={item?.quantity === quantity || !item && quantity === 0}
                             loading={status.includes('pending')}
