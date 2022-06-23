@@ -1,7 +1,6 @@
 
-import { useState } from "react";
 import { ShoppingCart } from "@mui/icons-material";
-import { AppBar, Badge, Box,IconButton, List, ListItem, Toolbar, Typography, useMediaQuery,useTheme} from "@mui/material";
+import { AppBar, Badge,IconButton, List, ListItem, Toolbar, Typography, useMediaQuery,useTheme} from "@mui/material";
 import { Link, NavLink } from "react-router-dom";
 import { useAppSelector } from "../store/configureStore";
 import DrawerComp from "./DrawerComp";
@@ -27,7 +26,6 @@ export default function Header() {
 
    const {basket} = useAppSelector(state => state.basket);
    const itemCount = basket?.items.reduce((sum, item) => sum + item.quantity, 0)
-   const [value, setValue] = useState();
    const theme = useTheme();
    console.log(theme);
    const isMatch = useMediaQuery(theme.breakpoints.down("md"));
@@ -43,7 +41,27 @@ export default function Header() {
                 <img className="logo" src="/icons/logo.png" alt=""/>
                 </div>
                 </Typography>
-                <div className="center_content">
+
+                <IconButton component = {Link} to='/basket' size='large' sx={{color:'black'}}>
+                    <Badge badgeContent={itemCount} color='primary'>
+                         <ShoppingCart />
+                    </Badge>
+               </IconButton>
+
+               {
+                      isMatch ? (
+                          <>
+                             <Typography>       
+                             </Typography>
+                             <DrawerComp/>  
+                          </>
+                      ) : (
+            
+                            <>  
+                     
+
+                         
+                     
                 <List sx={{display: 'flex', ml: 8}}>
                     {midLinks.map(({title, path}) => (
                         <ListItem
@@ -64,29 +82,11 @@ export default function Header() {
                     
                     ))}
                 </List>
-                </div>
+                
 
+                        
 
-               
-               <Box display='flex' alignItems='center'
-               >
-               <IconButton component = {Link} to='/basket' size='large' sx={{color:'black'}}>
-                    <Badge badgeContent={itemCount} color='primary'>
-                         <ShoppingCart />
-                    </Badge>
-               </IconButton>
-                  {
-                      isMatch ? (
-                          <>
-                             <Typography>
-                                   
-                             </Typography>
-                             <DrawerComp/>  
-                          </>
-                      ) : (
-
-                               <>
-                                  <List sx={{display: 'flex'}}>
+                <List sx={{display: 'flex'}}>
                              {rightLinks.map(({title, path}) => (
                                  <ListItem
                                     component={NavLink}
@@ -105,13 +105,10 @@ export default function Header() {
                                 </ListItem>
                              ))}
                          </List>
+                          
+                             </>
+                     )}                           
 
-                               </>
-                             
-                        )}
-
-
-             </Box>
              </Toolbar> 
          </AppBar>
     )

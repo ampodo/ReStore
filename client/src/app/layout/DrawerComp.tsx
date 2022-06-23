@@ -3,10 +3,23 @@
 import React, {useState}  from "react"
 import {Drawer, List, ListItemButton, ListItemIcon, ListItemText, IconButton} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
- const rightLinks = [
+import { NavLink } from "react-router-dom";
+
+
+
+   const rightLinks = [
     {title: 'login', path: '/login'},
     {title: 'register', path: '/register'},
 ]
+
+const midLinks = [
+
+    {title: 'catalog', path: '/catalog'},
+    {title: 'about', path: '/about'},
+    {title: 'contact', path: '/contact'},
+ ]
+
+
 
 const DrawerComp = () => {
     const [openDrawer, setOpenDrawer] = useState(false)
@@ -19,7 +32,24 @@ return (
                 {
                     rightLinks.map(({title, path}) => (
                                    
-                        <ListItemButton onClick={()=> setOpenDrawer(false)} key={path}>
+                        <ListItemButton onClick={() => setOpenDrawer(false)} 
+                           component={NavLink} to={path} key={path}>
+                        <ListItemIcon>
+                        <ListItemText>{title.toUpperCase()}</ListItemText>
+                         </ListItemIcon>      
+                         </ListItemButton>
+                         
+                    ))
+
+                }
+          </List>
+
+          <List>
+                {
+                    midLinks.map(({title, path}) => (
+                                   
+                        <ListItemButton onClick={() => setOpenDrawer(false)}          
+                         component={NavLink} to={path} key={path}>
                         <ListItemIcon>
                         <ListItemText>{title.toUpperCase()}</ListItemText>
                          </ListItemIcon>      
