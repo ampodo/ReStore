@@ -6,3 +6,34 @@
      }
 
 
+
+
+     .underlined {
+
+         color: #90caf9;
+
+     }
+
+
+     .slick-track,
+     .slick-list {
+     -webkit-perspective: 2000;
+     -webkit-backface-visibility: hidden;
+     }
+
+
+
+     @media only screen and (min-width: 1300px)  {
+
+         
+       
+          .group_hero {
+
+                width: 80%;
+          }
+      
+       
+        }
+
+        
+

@@ -32,7 +32,7 @@ export default function Header() {
    console.log(isMatch);
 
     return (
-         <AppBar position='sticky' style={{backgroundColor: "white"}}>
+         <AppBar position='static' style={{backgroundColor: "white"}}>
              <Toolbar sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                   <Typography variant='h6' component={NavLink}
                 to='/'
