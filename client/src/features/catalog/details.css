@@ -1,16 +1,11 @@
 
 
+.detail_pic {
 
-  @media only screen and (max-width: 895px)  {
-     
-      .detail_pic {
+    margin-top: 50px;
+}
 
-         width: auto;
-         height: 350px;
-         margin-top: 70px; 
 
-      }
-   
-    }
+    
 
-  
+

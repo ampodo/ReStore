@@ -10,11 +10,11 @@ interface Props {
 
 
  export default function AppPagination({metaData, onPageChange}: Props) {
-     const {currentPage, totalCount, totalPages, pageSize} = metaData;
+     const {currentPage, totalCount, totalPages, pageSize } = metaData;
      return (
             
         <Box display='flex' justifyContent='space-between' alignItems='center'>
-        <Typography>
+         <Typography>
                {(currentPage-1)*pageSize+1}-
               {currentPage*pageSize > totalCount 
                    ? totalCount 
@@ -26,7 +26,7 @@ interface Props {
                count={totalPages}
                page={currentPage}
                onChange={(e, page) => onPageChange(page)}
-               sx={{mb:2}}
+               sx={{p:2}}
                
            />
    </Box>

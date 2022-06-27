@@ -161,8 +161,29 @@ namespace API.Data
                 },
 
                
+                  new Product
+                {
+                    Name = "Cream",
+                    Description = "Cream with anti-aging properties of Iris extract. Helps to preserve skin's tonicity and youth. Consists of vegetable glycerin and wax.",
+                    Price = 59,
+                    PictureUrl = "/images/products/sevemiracle2.png",
+                    Brand = "Seve Miracle",
+                    Type = "Nourishing",
+                    QuantityInStock = 5
+                },
 
-               
+
+                  new Product
+                {
+                    Name = "Serum",
+                    Description = "Apricot Serum-Radiance 8 hours 8h Radiance Serum - Will become an indispensable assistant in the daily care of all types of skin (including fading). This serum has polishing effect and can be categorized as anti-fatigue elixir.",
+                    Price = 42,
+                    PictureUrl = "/images/products/apricot2.png",
+                    Brand = "Academie face",
+                    Type = "Nourishing",
+                    QuantityInStock = 5
+                }
+                    
             };
            
             foreach (var product in products)

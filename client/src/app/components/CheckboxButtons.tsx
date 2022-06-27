@@ -1,4 +1,4 @@
-import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
+import {  Checkbox, FormControlLabel, FormGroup } from "@mui/material";
 
 import {useState} from "react";
 
@@ -28,7 +28,8 @@ export default function CheckboxButtons({items, checked, onChange}: Props) {
 
 
      return(
-
+ 
+       
         <FormGroup>   
         {items.map(item => (
               <FormControlLabel
@@ -41,6 +42,6 @@ export default function CheckboxButtons({items, checked, onChange}: Props) {
                />
         ))}     
         </FormGroup> 
-
+        
      )
 }

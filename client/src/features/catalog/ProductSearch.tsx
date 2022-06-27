@@ -16,6 +16,7 @@ export default function ProductSearch() {
 
       return (
 
+        
         <TextField
         label='Search product'
         variant='outlined'
@@ -27,6 +28,7 @@ export default function ProductSearch() {
         }}
          />
 
+          
       )
 
 }
