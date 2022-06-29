@@ -17,12 +17,12 @@ namespace API.Data
          {
                 new Product
                 {
-                    Name = "Cleansing Water",
-                    Description = "For all skin types. Helps to remove any makeup from the face and eyes.",
-                    Price = 30,
-                    PictureUrl = "/images/products/derm1.png",
+                    Name = "Cream",
+                    Description = "Age-recovery cream that eliminates pigmentary spots and protects epidermis from pollution and stress.",
+                    Price = 89,
+                    PictureUrl = "/images/products/derm.png",
                     Brand = "DERM ACTE",
-                    Type = "Micellar",
+                    Type = "Anti-age",
                     QuantityInStock = 5
                 },
                 new Product
@@ -166,7 +166,7 @@ namespace API.Data
                     Name = "Cream",
                     Description = "Cream with anti-aging properties of Iris extract. Helps to preserve skin's tonicity and youth. Consists of vegetable glycerin and wax.",
                     Price = 59,
-                    PictureUrl = "/images/products/sevemiracle2.png",
+                    PictureUrl = "/images/products/seve2.png",
                     Brand = "Seve Miracle",
                     Type = "Nourishing",
                     QuantityInStock = 5

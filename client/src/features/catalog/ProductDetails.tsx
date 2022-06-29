@@ -51,13 +51,13 @@ export default function ProductDetails() {
    if (!product) return <NotFound />
 
    return (
-       <Grid container spacing={6}>
-         <Grid item xs={6}>
+       <Grid container spacing={6} sx={{p:4}}>
+         <Grid item xs={12} md={6} sx={{mt:2}}>
              <div className='detail_pic'>
-            <img  src={product.pictureUrl} alt={product.name} style={{width: '90%', height: '90%'}} />
+            <img  src={product.pictureUrl} alt={product.name} style={{width: '100%', backgroundSize: 'contain'}} />
              </div>
          </Grid>
-           <Grid item xs={6}>
+           <Grid item  xs={12} md={6}>
               <Typography variant='h3'>{product.name}</Typography>
               <Divider sx={{mb: 2}} />
               <Typography variant='h4' color='white'>€{(product.price).toFixed(2)}</Typography>
