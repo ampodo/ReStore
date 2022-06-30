@@ -2,6 +2,8 @@ import axios, {AxiosError, AxiosResponse} from "axios";
 import {toast} from "react-toastify";
 import { history } from "../..";
 import { PaginatedResponse } from "../models/pagination";
+import { store } from "../store/configureStore";
+
 
 const load = () => new Promise(resolve => setTimeout(resolve, 500));
 
@@ -86,11 +88,19 @@ const Basket = {
 }
 
 
+const Account = {
+    login: (values: any) => requests.post('account/login', values),
+    register: (values: any) => requests.post('account/register', values),
+    currentUser: () => requests.get('account/currentUser'),
+}
+
+
 
 const agent = {
     Catalog,
     TestErrors,
-    Basket
+    Basket,
+    Account
 }
 
 
