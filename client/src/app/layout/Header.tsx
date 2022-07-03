@@ -4,6 +4,7 @@ import { AppBar, Badge,IconButton, List, ListItem, Toolbar, Typography, useMedia
 import { Link, NavLink } from "react-router-dom";
 import { useAppSelector } from "../store/configureStore";
 import DrawerComp from "./DrawerComp";
+import SignedInMenu from "./SignedInMenu";
 import "./styles.css"
 
 
@@ -25,6 +26,7 @@ const rightLinks = [
 export default function Header() {
 
    const {basket} = useAppSelector(state => state.basket);
+   const {user} = useAppSelector(state => state.account);
    const itemCount = basket?.items.reduce((sum, item) => sum + item.quantity, 0)
    const theme = useTheme();
    console.log(theme);
@@ -82,31 +84,39 @@ export default function Header() {
                     
                     ))}
                 </List>
+
+                {user ? (
+                       <SignedInMenu />
+                ) : (
+
+
+                    <List sx={{display: 'flex'}}>
+                    {rightLinks.map(({title, path}) => (
+                        <ListItem
+                           component={NavLink}
+                           to={path}
+                           key={path}
+                           sx={{color: 'black',  fontWeight: 'bold',
+                           '&:hover': {
+                            color: 'grey.500'
+                          },
+                        '&.active': {
+                            color: 'grey.400'
+                            }  
+                        }}
+                        >
+                           {title.toUpperCase()}
+                       </ListItem>
+                    ))}
+                </List>
+
+
+
+                )}
+
                 
-
-                        
-
-                <List sx={{display: 'flex'}}>
-                             {rightLinks.map(({title, path}) => (
-                                 <ListItem
-                                    component={NavLink}
-                                    to={path}
-                                    key={path}
-                                    sx={{color: 'black',  fontWeight: 'bold',
-                                    '&:hover': {
-                                     color: 'grey.500'
-                                   },
-                                 '&.active': {
-                                     color: 'grey.400'
-                                     }  
-                                 }}
-                                 >
-                                    {title.toUpperCase()}
-                                </ListItem>
-                             ))}
-                         </List>
                           
-                             </>
+                      </>
                      )}                           
 
              </Toolbar> 

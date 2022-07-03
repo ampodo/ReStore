@@ -52,16 +52,16 @@ namespace API.Data
                 new Product
                 {
                     Name = "Cream",
-                    Description = "Age-recovery cream that eliminates pigmentary spots and protects epidermis from pollution and stress.",
+                    Description = "Exfoliating cream that eliminates pigmentary spots and protects epidermis from pollution and stress.",
                     Price = 89,
-                    PictureUrl = "/images/products/derm.png",
+                    PictureUrl = "/images/products/nightderm.png",
                     Brand = "DERM ACTE",
-                    Type = "Anti-age",
+                    Type = "Exfoliating",
                     QuantityInStock = 5
                 },
                 new Product
                 {
-                    Name = "Moisturizing Fluid",
+                    Name = "Fluid",
                     Description = "This facial fluid protects skin from sun exposure and pollution.",
                     Price = 43,
                     PictureUrl = "/images/products/derm2.png",
@@ -69,27 +69,9 @@ namespace API.Data
                     Type = "Moisturizer",
                     QuantityInStock = 5
                 },
-                new Product
-                {
-                    Name = "White UV Screen",
-                    Description = "Splendid solution embodies brightening, invisible anti-UV, and anti-pollution treatment.",
-                    Price = 48,
-                    PictureUrl = "/images/products/derm3.png",
-                    Brand = "DERM ACTE",
-                    Type = "Brightening",
-                    QuantityInStock = 5
-                },
-                new Product
-                {
-                    Name = "Corrector",
-                    Description = "A many-sided skincare product that can be applied to various types of facial lines to eliminate fatigue.",
-                    Price = 93,
-                    PictureUrl = "/images/products/derm4.png",
-                    Brand = "DERM ACTE",
-                    Type = "Serum",
-                    QuantityInStock = 5
-                },
-                new Product
+                
+                   
+                 new Product
                 {
                     Name = "Lotion",
                     Description = "Alcohol-free lotion that consists of spruce oil and carrot extract. Compatible with all skin types.",
@@ -101,7 +83,7 @@ namespace API.Data
                 },
                 new Product
                 {
-                    Name = "Cleansing gel",
+                    Name = "Gel",
                     Description = "Facial gel wash contains lavender essential oil and lemon extract.",
                     Price = 28,
                     PictureUrl = "/images/products/aroma2.png",
@@ -111,7 +93,7 @@ namespace API.Data
                 },
                 new Product
                 {
-                    Name = "Radiance mask",
+                    Name = "Mask",
                     Description = "Treatment for all skin types with Blackcurrant Bud extract that hydrates the skin.",
                     Price = 30,
                     PictureUrl = "/images/products/aroma3.png",
@@ -121,7 +103,7 @@ namespace API.Data
                 },
                 new Product
                 {
-                    Name = "Light fluid",
+                    Name = "Fluid",
                     Description = "Hydrating treatment comprises soft fluid in order to moisturize the most dehydrated epidermis.",
                     Price = 56,
                     PictureUrl = "/images/products/hydra1.png",
@@ -134,24 +116,15 @@ namespace API.Data
                     Name = "Serum",
                     Description = "Booster for all skin types. This is a fluid serum with moisturizing ingredients. Composed of acid pearls, more than 90% of natural ingredients.",
                     Price = 60,
-                    PictureUrl = "/images/products/hydra2.png",
+                    PictureUrl = "/images/products/rezanaja.png",
                     Brand = "Hydraderm",
                     Type = "Treatment",
                     QuantityInStock = 5
                 },
+                   
                 new Product
                 {
-                    Name = "Mask",
-                    Description = "Removes small dehydration lines from the face. Mask recovers softness of the skin. Nourishing and vitalizing.",
-                    Price = 33,
-                    PictureUrl = "/images/products/hydra3.png",
-                    Brand = "Hydraderm",
-                    Type = "Re-hydrating",
-                    QuantityInStock = 5
-                },
-                new Product
-                {
-                    Name = "Shaving gel",
+                    Name = "Gel",
                     Description = "This lubricating gel can be used as a cleanser. Reduces the painful feeling of tightness.",
                     Price = 31,
                     PictureUrl = "/images/products/men1.png",
@@ -161,7 +134,7 @@ namespace API.Data
                 },
                 new Product
                 {
-                    Name = "Eye contour gel",
+                    Name = "Gel",
                     Description = "A specific gel that removes dark circles and puffiness.",
                     Price = 32,
                     PictureUrl = "/images/products/men2.png",
@@ -216,7 +189,21 @@ namespace API.Data
                     Brand = "Academie face",
                     Type = "Nourishing",
                     QuantityInStock = 5
+                },
+
+
+                  new Product
+                {
+                    Name = "Lotion",
+                    Description = "Alcohol-free normalizing toner that purifies face. Consists of aloe vera, protein and glycol.",
+                    Price = 26,
+                    PictureUrl = "/images/products/lotion2.png",
+                    Brand = "Academie face",
+                    Type = "Purification",
+                    QuantityInStock = 5
                 }
+
+
                     
             };
            
