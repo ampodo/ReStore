@@ -21,74 +21,74 @@ import { setBasket } from "../../features/basket/basketSlice";
 import Footer from "./Footer";
 import Login  from "../../features/account/Login";
 import Register from "../../features/account/Register";
- 
-
-
+import { fetchCurrentUser } from "../../features/account/accountSlice";
 
 function App() {
-     const dispatch = useAppDispatch();
-     const [loading, setLoading] = useState(true);
-     
-     useEffect(() => {
-           const buyerId = getCookie('buyerId');
-           if (buyerId) {
-              agent.Basket.get()
-                 .then(basket => dispatch(setBasket(basket)))
-                 .catch(error => console.log(error))
-                 .finally(() => setLoading(false));
-           } else {
-              setLoading(false);
-             }
-            
-     },[dispatch])
-    
-     const theme = createTheme({
-          palette: {
-             mode: 'dark',
-             
-          },
-
-      
-      
-      typography: {
-        fontFamily: ["Poppins", 'Open Sans'].join(',')
-      }      
-
-     })
-
-     if (loading) return <LoadingComponent message='Loading app...' />
+  const dispatch = useAppDispatch();
+  const [loading, setLoading] = useState(true);
   
-
-
-  return (
-    
-    <ThemeProvider theme={theme}>
-      <ToastContainer position='bottom-right' hideProgressBar/>
-      <CssBaseline />
-       <Header />
-       <main className="container content">
-       <Route exact path='/' component={HomePage} />
-      <Route path={'/(.+)'} render={() => (
-        <Container  sx={{ mt: 4 }}>
-          <Switch>
-            <Route exact path='/catalog' component={Catalog} />
-            <Route path='/catalog/:id' component={ProductDetails} />
-            <Route path='/about' component={AboutPage} />
-            <Route path='/contact' component={ContactPage} />
-            <Route path='/basket' component={BasketPage} />
-            <Route path='/checkout' component={CheckoutPage} />
-            <Route path='/login' component={Login} />
-            <Route path='/register' component={Register} />
-            <Route component={NotFound} />
-          </Switch>
-        </Container>
+  useEffect(() => {
+        const buyerId = getCookie('buyerId');
+        dispatch(fetchCurrentUser());
+        if (buyerId) {
+           agent.Basket.get()
+              .then(basket => dispatch(setBasket(basket)))
+              .catch(error => console.log(error))
+              .finally(() => setLoading(false));
+        } else {
+           setLoading(false);
+          }
+         
+  },[dispatch])
+ 
+  const theme = createTheme({
+       palette: {
+          mode: 'dark',
           
-      )} />
-         </main>
-      <Footer/>
-    </ThemeProvider>
+       },
+
    
-  );
+   
+   typography: {
+     fontFamily: ["Poppins", 'Open Sans'].join(',')
+   }      
+
+  })
+
+  if (loading) return <LoadingComponent message='Loading app...' />
+
+
+
+return (
+ 
+ <ThemeProvider theme={theme}>
+   <ToastContainer position='bottom-right' hideProgressBar/>
+   <CssBaseline />
+    <Header />
+    <main className="container content">
+    <Route exact path='/' component={HomePage} />
+   <Route path={'/(.+)'} render={() => (
+     <Container  sx={{ mt: 4 }}>
+       <Switch>
+         <Route exact path='/catalog' component={Catalog} />
+         <Route path='/catalog/:id' component={ProductDetails} />
+         <Route path='/about' component={AboutPage} />
+         <Route path='/contact' component={ContactPage} />
+         <Route path='/basket' component={BasketPage} />
+         <Route path='/checkout' component={CheckoutPage} />
+         <Route path='/login' component={Login} />
+         <Route path='/register' component={Register} />
+         <Route component={NotFound} />
+       </Switch>
+     </Container>
+       
+   )} />
+      </main>
+   <Footer/>
+ </ThemeProvider>
+
+);
 }
 
 export default App;
+

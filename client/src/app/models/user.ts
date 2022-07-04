@@ -2,6 +2,6 @@
 export interface User {
 
     email: string;
-    toke: string;
+    token: string;
 
 }
