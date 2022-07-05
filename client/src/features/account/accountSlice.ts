@@ -5,8 +5,7 @@ import { User } from "../../app/models/user";
 import { history } from "../..";
 import agent from "../../app/api/agent";
 import { toast } from "react-toastify";
-import { HistoryToggleOff } from "@mui/icons-material";
-
+import { setBasket } from "../basket/basketSlice";
 
 
 
@@ -24,7 +23,9 @@ export const signInUser = createAsyncThunk<User, FieldValues>(
 'account/signInUser',
 async (data, thunkAPI) => {
     try { 
-          const user = await agent.Account.login(data);
+          const userDto = await agent.Account.login(data);
+          const {basket, ...user} = userDto;
+          if (basket) thunkAPI.dispatch(setBasket(basket));
           localStorage.setItem('user', JSON.stringify(user));
           return user;
        
@@ -40,7 +41,9 @@ export const fetchCurrentUser = createAsyncThunk<User>(
     async (_, thunkAPI) => {
         thunkAPI.dispatch(setUser(JSON.parse(localStorage.getItem('user')!)));
         try { 
-              const user = await agent.Account.currentUser();
+              const userDto = await agent.Account.currentUser();
+              const {basket, ...user} = userDto;
+              if (basket) thunkAPI.dispatch(setBasket(basket));
               localStorage.setItem('user', JSON.stringify(user));
               return user;
            
@@ -88,8 +91,8 @@ export const accountSlice = createSlice({
                    state.user = action.payload;
 
     });
-    builder.addMatcher(isAnyOf(signInUser.rejected), (state, action) => {
-        console.log(action.payload);
+         builder.addMatcher(isAnyOf(signInUser.rejected), (state, action) => {
+         console.log(action.payload);
 
      })
 

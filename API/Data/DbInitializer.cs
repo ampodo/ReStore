@@ -24,7 +24,7 @@ namespace API.Data
 
             };
 
-
+            
             await userManager.CreateAsync(user, "Pas$$w0rdzeut");
             await userManager.AddToRoleAsync(user, "Member");
 

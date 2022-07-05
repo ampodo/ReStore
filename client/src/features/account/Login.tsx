@@ -9,7 +9,6 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {useForm, FieldValues} from 'react-hook-form';
 import { LoadingButton } from '@mui/lab';
-import agent from '../../app/api/agent';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useAppDispatch } from '../../app/store/configureStore';
 import { signInUser } from './accountSlice';
@@ -20,19 +19,22 @@ const theme = createTheme();
 
 export default function Login() {
     const history = useHistory();
+    const location = useLocation<any>();
     const dispatch = useAppDispatch();
 
     const {register, handleSubmit, formState: {isSubmitting, errors, isValid}} = useForm({
     mode: 'all'
-})
+});
 
     
     async function submitForm(data: FieldValues) {
-       await dispatch(signInUser(data));
-       history.push('/catalog');
-
-  }
-    
+      try {
+        await dispatch(signInUser(data));
+        history.push(location.state?.from?.pathname ||  '/catalog');
+    } catch (error) {
+        console.log(error);
+    }
+}
 
     return (
     <ThemeProvider theme={theme}>
