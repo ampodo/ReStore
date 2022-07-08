@@ -29,7 +29,34 @@
      }
 
      
+     .bg-1 {
+        object-fit:cover;
+        object-position:50% 50%;
+        vertical-align: middle;
+        max-width:100%;
+       
+       
+     }
     
+     .bg-2 {
+        object-fit:cover; 
+        object-position:50% 50%; 
+        vertical-align: middle;
+        max-width:100%;
+        
+       
+    }
+
+    .bg-3 {
+        object-fit:cover;
+        object-position:50% 50%;
+        vertical-align: middle;
+        max-width:100%;
+        
+    }
+
+
+
 
 
      

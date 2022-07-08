@@ -167,19 +167,6 @@ namespace API.Data
                     QuantityInStock = 5
                 },
 
-               
-                  new Product
-                {
-                    Name = "Cream",
-                    Description = "Cream with anti-aging properties of Iris extract. Helps to preserve skin's tonicity and youth. Consists of vegetable glycerin and wax.",
-                    Price = 59,
-                    PictureUrl = "/images/products/seve2.png",
-                    Brand = "Seve Miracle",
-                    Type = "Nourishing",
-                    QuantityInStock = 5
-                },
-
-
                   new Product
                 {
                     Name = "Serum",
@@ -201,9 +188,18 @@ namespace API.Data
                     Brand = "Academie face",
                     Type = "Purification",
                     QuantityInStock = 5
+                },
+
+                new Product
+                {
+                    Name = "Cream",
+                    Description = "Cream with anti-aging properties of Iris extract. Helps to preserve skin's tonicity and youth. Consists of vegetable glycerin and wax.",
+                    Price = 59,
+                    PictureUrl = "/images/products/seve2.png",
+                    Brand = "Seve Miracle",
+                    Type = "Nourishing",
+                    QuantityInStock = 5
                 }
-
-
                     
             };
            
