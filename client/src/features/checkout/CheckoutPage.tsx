@@ -95,7 +95,7 @@ export default function CheckoutPage() {
                             Thank you for your order.
                         </Typography>
                         <Typography variant="subtitle1">
-                            Your order number is #{orderNumber}. Please notice that this is testing version.
+                            Your order number is #{orderNumber}. Please notice that this is a testing version.
                             No confirmation has been sent.
                         </Typography>
                     </>

@@ -1,4 +1,6 @@
 
+
+
 import Avatar from '@mui/material/Avatar';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
@@ -10,8 +12,9 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {useForm} from 'react-hook-form';
 import {LoadingButton } from '@mui/lab';
 import agent from '../../app/api/agent';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import "./account.css";
 
 
 
@@ -46,14 +49,14 @@ const history = useHistory();
 
     return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: '100vh', p:4 }}>
+      <Grid container component="main" sx={{p:4, mb:8}}>
         <Grid
           item
           xs={false}
           sm={4}
           md={7}
           sx={{
-            backgroundImage: `url('${process.env.PUBLIC_URL}/creamwavy.png')`,
+            backgroundImage: `url('${process.env.PUBLIC_URL}/vera.png')`,
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -144,15 +147,8 @@ const history = useHistory();
                    >
                      REGISTER
               </LoadingButton>
-
-              <Grid container justifyContent="center"
-                              alignItems="center">
-                <Grid item>
-                  <Link to='/login'>
-                    {"Already have an account? Sign Up"}
-                  </Link>
-                </Grid>
-              </Grid>
+                    
+            
             </Box>
           </Box>
         </Grid>
@@ -160,5 +156,4 @@ const history = useHistory();
     </ThemeProvider>
   );
 }
-
 

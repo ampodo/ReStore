@@ -1,36 +1,37 @@
 
  
+
  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-     } 
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+    } 
 
 
-    
-     .content {
-              
-        min-height: calc(100vh - 88px - 64px); 
-            
-        }
+   
+    .content {
+             
+      min-height: calc(100vh - 88px - 64px); 
+          
+      }
 
 
-    
-     .footer {
-      flex-shrink: 0;
-      padding: 2em;
-      text-align: center;
-      background-color: white;
-      color: black;
-      width: 100%;
-      
+   
+    .footer {
+     flex-shrink: 0;
+     padding: 2em;
+     text-align: center;
+     background-color: white;
+     color: black;
+     width: 100%;
+     
+   }
+
+
+    .copyright {
+        
+     font-weight: bold;
+
     }
-
-
-     .copyright {
-         
-      font-weight: bold;
-
-     }
   
 

@@ -7,7 +7,7 @@ import LoadingComponent from "../../app/layout/LoadingComponent";
 import { useAppDispatch, useAppSelector } from "../../app/store/configureStore";
 import { addBasketItemAsync, removeBasketItemAsync  } from "../basket/basketSlice";  
 import { fetchProductAsync, productSelectors } from "./catalogSlice";
-import "./details.css";
+
 
 export default function ProductDetails() {
    const {basket, status} = useAppSelector(state => state.basket);

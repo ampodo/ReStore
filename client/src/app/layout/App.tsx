@@ -16,11 +16,12 @@ import LoadingComponent from "./LoadingComponent";
 import CheckoutPage from "../../features/checkout/CheckoutPage";
 import { useAppDispatch } from "../store/configureStore";
 import { fetchBasketAsync } from "../../features/basket/basketSlice";
-import Footer from "./Footer";
 import Login  from "../../features/account/Login";
 import Register from "../../features/account/Register";
 import { fetchCurrentUser } from "../../features/account/accountSlice";
 import PrivateRoute from "./PrivateRoute";
+import Orders from "../../features/orders/Orders";
+import Footer from "./Footer";
 
 
 function App() {
@@ -83,6 +84,7 @@ return (
          <Route path='/contact' component={ContactPage} />
          <Route path='/basket' component={BasketPage} />
          <PrivateRoute path='/checkout' component={CheckoutPage} />
+         <PrivateRoute path='/orders' component={Orders} />
          <Route path='/login' component={Login} />
          <Route path='/register' component={Register} />
          <Route component={NotFound} />
@@ -91,7 +93,7 @@ return (
        
    )} />
       </main>
-   <Footer/>
+      <Footer/>
  </ThemeProvider>
 
 );

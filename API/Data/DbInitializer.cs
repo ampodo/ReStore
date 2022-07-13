@@ -170,7 +170,7 @@ namespace API.Data
                   new Product
                 {
                     Name = "Serum",
-                    Description = "Apricot Serum-Radiance 8 hours 8h Radiance Serum - Will become an indispensable assistant in the daily care of all types of skin (including fading). This serum has polishing effect and can be categorized as anti-fatigue elixir.",
+                    Description = "Apricot Serum-Radiance 8 hours will definitely become an indispensable assistant in your daily care. Suitable for all types of skin (including fading). This serum has polishing effect and can be categorized as anti-fatigue elixir.",
                     Price = 42,
                     PictureUrl = "/images/products/apricot2.png",
                     Brand = "Academie face",
