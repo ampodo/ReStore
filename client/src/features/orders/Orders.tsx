@@ -45,7 +45,7 @@ export default function Orders() {
                 <TableCell component="th" scope="row">
                   {order.id}
                 </TableCell>
-                <TableCell align="center">{currencyFormat(order.total)}</TableCell>
+                <TableCell align="center">{currencyFormat(order.subtotal)}</TableCell>
                 <TableCell align="center">{order.orderDate.split('T')[0]}</TableCell>
                 <TableCell  align="center">{order.orderStatus}</TableCell>
                 <TableCell  align="right"> 
