@@ -40,7 +40,7 @@ export default function Homepage() {
       <Slider {...settings}>
           
           <div className="bg-1">
-              <img src="/images/hero.png" alt="hero" style={{display: 'block', width:'100%',  maxHeight:570, backgroundSize: 'cover', backgroundAttachment: "fixed", backgroundRepeat: "no-repeat" }}/>
+              <img src="/images/hero1.png" alt="hero" style={{display: 'block', width:'100%',  maxHeight:570, backgroundSize: 'cover', backgroundAttachment: "fixed", backgroundRepeat: "no-repeat" }}/>
           </div>
           <div className="bg-2">
               <img src="/images/hero2.png" alt="hero" style={{display: 'block',  width:'100%', maxHeight:570, backgroundSize: 'cover', backgroundAttachment: "fixed", backgroundRepeat: "no-repeat" }} />
@@ -51,8 +51,8 @@ export default function Homepage() {
           
       </Slider>
        
-         <Box display='flex' justifyContent='center' sx={{p:4, mt:6}}>                 
-          <Typography align='center' variant='h3'>Welcome to Academie online shop</Typography>
+         <Box display='flex' justifyContent='center' sx={{p:4, mt:2}}>                 
+          <Typography align='center' variant='h4'>Welcome to Academie online shop</Typography>
        </Box> 
 
 

@@ -67,7 +67,7 @@ const history = useHistory();
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
-              my: 8,
+              my: 6,
               mx: 4,
               display: 'flex',
               flexDirection: 'column',
@@ -143,7 +143,7 @@ const history = useHistory();
                    disabled={!isValid}
                    type="submit" 
                    fullWidth 
-                   variant="contained" sx={{mt:3, mb:2}} 
+                   variant="contained" sx={{ mb:8}} 
                    >
                      REGISTER
               </LoadingButton>
