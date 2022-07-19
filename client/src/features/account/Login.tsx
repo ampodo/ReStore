@@ -38,7 +38,7 @@ export default function Login() {
 
     return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{p:4, mb:6}}>
+      <Grid container component="main" sx={{px:4, mb:6, py:6}}>
         <Grid
           item
           xs={false}

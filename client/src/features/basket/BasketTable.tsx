@@ -8,6 +8,7 @@ import { BasketItem } from "../../app/models/basket";
 import { useAppSelector, useAppDispatch } from "../../app/store/configureStore";
 import { currencyFormat } from "../../app/util/util";
 import { removeBasketItemAsync, addBasketItemAsync } from "./basketSlice";
+import "./baskettable.css";
 
 interface Props {
     items: BasketItem[];
@@ -18,7 +19,8 @@ export default function BasketTable({ items, isBasket = true }: Props) {
     const { status } = useAppSelector(state => state.basket);
     const dispatch = useAppDispatch();
     return (
-        <TableContainer component={Paper}>
+        
+        <TableContainer component={Paper} sx={{mt:6}}>
             <Table sx={{ minWidth: 650 }}>
                 <TableHead>
                     <TableRow>
@@ -78,6 +80,7 @@ export default function BasketTable({ items, isBasket = true }: Props) {
                 </TableBody>
             </Table>
         </TableContainer>
+       
     )
 } 
 

@@ -51,7 +51,7 @@ export default function Homepage() {
           
       </Slider>
        
-         <Box display='flex' justifyContent='center' sx={{p:4, mt:2}}>                 
+         <Box display='flex' justifyContent='center' sx={{p:4, mt:4}}>                 
           <Typography align='center' variant='h4'>Welcome to Academie online shop</Typography>
        </Box> 
 

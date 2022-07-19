@@ -4,7 +4,7 @@ export default function ContactPage() {
    return (
 
       <Typography variant='h2'>
-         Contact page  
+        
       </Typography>
 
    )

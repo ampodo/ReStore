@@ -9,7 +9,7 @@
            
     const { basket } = useAppSelector(state => state.basket);
     
-     if (!basket) return <Typography variant='h3'>Your basket is empty</Typography>
+     if (!basket) return <Typography variant='h3'></Typography>
      
      return (
 
@@ -20,7 +20,7 @@
              <Grid item xs={6}>
              <BasketSummary />
              <Button
-             sx={{mb:4}}
+             sx={{mb:14}}
              component={Link} 
              to='/checkout' 
              variant='contained' 

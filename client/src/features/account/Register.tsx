@@ -49,7 +49,7 @@ const history = useHistory();
 
     return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{p:4, mb:8}}>
+      <Grid container component="main" sx={{px:4, mb:8, py:6}}>
         <Grid
           item
           xs={false}
